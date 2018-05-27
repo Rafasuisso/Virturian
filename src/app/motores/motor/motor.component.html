@@ -1,0 +1,34 @@
+<form #motorForm="ngForm"(ngSubmit)="onSubmit(motorForm)" >
+  <div class="form-group">
+    <label>Numero de polos</label>
+    <input  class="form-control" name="numeroPolo" #numeroPolo="ngModel" [(ngModel)]="motorService.selectedMotor.numeroPolo" placeholder="Numero de Polos" required >
+  </div>
+  <div class="form-group">
+    <label>Tensão de rede[V]</label>
+    <input  class="form-control" name="tensao" #tensao="ngModel" [(ngModel)]="motorService.selectedMotor.tensao" placeholder="Tensão" required>
+  </div>
+  <div class="form-group">
+    <label>Regime de serviço</label>
+    <input  class="form-control" name="regimeServico" #regimeServico="ngModel" [(ngModel)]="motorService.selectedMotor.regimeServico" placeholder="Regime de serviço" required>
+  </div>
+  <div class="form-group">
+    <label>Corrente nominal[A]</label>
+    <input  class="form-control" name="correnteNominal" #correnteNominal="ngModel" [(ngModel)]="motorService.selectedMotor.correnteNominal" placeholder="Corrente nominal"required >
+  </div>
+  <div class="form-group">
+    <label>Potência nominal[W]</label>
+    <input  class="form-control" name="potenciaNominal" #potenciaNominal="ngModel" [(ngModel)]="motorService.selectedMotor.potenciaNominal" placeholder="Potência nominal" required>
+  </div>
+  <div class="form-group">
+    <label>Torque máximo[Nm]</label>
+    <input  class="form-control" name="torqueMaximo" #torqueMaximo="ngModel" [(ngModel)]="motorService.selectedMotor.torqueMaximo" placeholder="Torque máximo" required>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" type="submit">
+      <i class="fa fa-floppy-o"></i>
+      Incluir</button>
+    <button class="btn btn-default" type="reset" (click)="resetForm(motorForm)">
+        <i class="fa fa-repeat"></i>
+      Reset</button>
+  </div>
+</form>
